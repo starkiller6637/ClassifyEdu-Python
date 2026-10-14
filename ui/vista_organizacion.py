@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
-from .organizador_modelo import organizar_con_modelo
+from utils.organizador_modelo import organizar_con_modelo
 
 def mostrar_organizacion(root, volver_callback):
     for widget in root.winfo_children():

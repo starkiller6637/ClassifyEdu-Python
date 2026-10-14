@@ -121,7 +121,7 @@ def entrenar_modelo():
     plt.tight_layout()
     plt.show()
 
-    joblib.dump((modelo, vectorizer, materia_centroides), "modelo_clasificador.pkl")
+    joblib.dump((modelo, vectorizer, materia_centroides), os.path.join(os.path.dirname(__file__), "modelo_clasificador.pkl"))
     print("✅ Modelo entrenado y guardado como 'modelo_clasificador.pkl'.")
 
 if __name__ == "__main__":

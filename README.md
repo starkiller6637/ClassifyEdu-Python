@@ -108,7 +108,7 @@ python main.py
 ```
 
 > [!IMPORTANT]
-> Esta versión utiliza rutas relativas para los iconos y el modelo, por lo que debe ejecutarse desde la carpeta principal del proyecto. El uso de `.ico` puede requerir ajustes en sistemas distintos de Windows. La compatibilidad multiplataforma no está verificada.
+> Los iconos y el modelo se cargan desde rutas calculadas a partir del proyecto. Para crear las carpetas de semestre en la ubicación esperada, ejecuta el programa desde la carpeta principal del repositorio. El uso de `.ico` puede requerir ajustes en sistemas distintos de Windows. La compatibilidad multiplataforma no está verificada.
 
 ### Uso básico
 
@@ -122,19 +122,29 @@ python main.py
 
 ```text
 ClassifyEdu-Python/
-├── main.py                      # Inicio de la interfaz
-├── model/
-│   └── model.py                 # Entrenamiento exploratorio
-├── modelo_clasificador.pkl      # Artefacto del modelo incluido
+├── main.py                         # Punto de entrada
+├── README.md                       # Presentación y documentación
+├── requirements.txt                # Dependencias de la aplicación
+├── assets/
+│   └── icons/                      # Iconos de la interfaz
+├── ui/
+│   ├── __init__.py
+│   ├── vista_creacion.py           # Crear semestres y materias
+│   └── vista_organizacion.py       # Selección de carpetas para organizar
 ├── utils/
-│   ├── vista_creacion.py        # Pantalla de creación de carpetas
-│   ├── vista_organizacion.py    # Pantalla de organización
-│   ├── organizador_modelo.py    # Clasificación y movimiento de archivos
-│   ├── lectura_archivos.py      # Lectura y clasificación por coincidencias
-│   ├── organizador.py           # Organizador basado en reglas
-│   └── gui.py                   # Código auxiliar histórico
-└── requirements.txt
+│   ├── __init__.py
+│   └── organizador_modelo.py       # Clasificación y movimiento
+├── model/
+│   ├── model.py                    # Script histórico de entrenamiento
+│   └── modelo_clasificador.pkl     # Modelo entrenado incluido
+└── legacy/
+    ├── README.md                   # Contexto de los módulos históricos
+    ├── gui.py
+    ├── lectura_archivos.py
+    └── organizador.py
 ```
+
+Los módulos de `legacy/` se conservan únicamente como registro histórico y no forman parte del flujo de ejecución de `main.py`. Esta reorganización solo cambia la ubicación de los archivos y las referencias necesarias para encontrarlos, sin alterar la lógica de clasificación.
 
 ## Alcance y limitaciones de esta versión
 
