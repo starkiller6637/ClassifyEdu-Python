@@ -69,7 +69,7 @@ def clasificar_por_match(texto_original, materias_existentes):
 
 
 def organizar_con_modelo(carpeta_origen=None, carpeta_semestre=None):
-    modelo_path = "modelo_clasificador.pkl"
+    modelo_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "model", "modelo_clasificador.pkl")
     if not os.path.exists(modelo_path):
         messagebox.showerror("Error", "El modelo clasificador no se encontró.")
         return

@@ -1,14 +1,17 @@
 import tkinter as tk
-from utils.vista_creacion import mostrar_creacion
-from utils.vista_organizacion import mostrar_organizacion
+from pathlib import Path
+from ui.vista_creacion import mostrar_creacion
+from ui.vista_organizacion import mostrar_organizacion
+
+ASSETS_DIR = Path(__file__).resolve().parent / "assets" / "icons"
 
 def mostrar_menu(root):
     for widget in root.winfo_children():
         widget.destroy()
 
     # Íconos
-    icono_estructura = tk.PhotoImage(file="icono_puzzle.png")
-    icono_organizar = tk.PhotoImage(file="icono_inteligente.png")
+    icono_estructura = tk.PhotoImage(file=str(ASSETS_DIR / "icono_puzzle.png"))
+    icono_organizar = tk.PhotoImage(file=str(ASSETS_DIR / "icono_inteligente.png"))
 
     tk.Label(root, text="¿Qué deseas hacer con ClassifyEDU?", font=("Helvetica", 18, "bold"),
              bg="#F5F5F7", fg="#000").pack(pady=(50, 0))
@@ -43,7 +46,7 @@ def mostrar_menu(root):
 
 def main():
     root = tk.Tk()
-    root.iconbitmap("logoc.ico")
+    root.iconbitmap(str(ASSETS_DIR / "logoc.ico"))
     root.title("ClassifyEDU")
     root.geometry("800x600")
     root.configure(bg="#F5F5F7")
