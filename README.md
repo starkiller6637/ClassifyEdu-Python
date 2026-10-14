@@ -1,4 +1,4 @@
-# ClassifyEDU - Pyhton
+# ClassifyEDU - Python
 
 **Organizador de archivos académicos para estudiantes, desarrollado en Python.**
 
