@@ -46,6 +46,42 @@ Semestre/
 
 Los nombres de las materias y del semestre se definen desde la aplicación.
 
+
+## 📸 Vista previa de la aplicación
+
+### Menú principal
+
+ClassifyEDU cuenta con una interfaz gráfica desarrollada en Tkinter que permite acceder a sus dos funcionalidades principales: crear estructuras académicas y organizar archivos de manera inteligente.
+
+![Menú principal de ClassifyEDU](docs/screenshots/main-menu.png)
+
+### 📁 Creación de estructuras académicas
+
+Permite generar automáticamente una estructura de carpetas personalizada a partir del semestre y las materias ingresadas por el usuario.
+
+![Creación de estructura académica](docs/screenshots/create-structure.png)
+
+**Ejemplo de estructura generada:**
+
+![Carpetas organizadas por materias](docs/screenshots/reslut-subjects.png)
+
+Cada materia puede contener subcarpetas que permiten separar documentos, archivos PDF y recursos multimedia.
+
+![Categorías de archivos](docs/screenshots/result-subfolder.png)
+
+### 🧠 Organización inteligente de archivos
+
+El usuario selecciona una carpeta de origen y una carpeta de destino. ClassifyEDU analiza los nombres y, cuando es posible, el contenido textual de los documentos para determinar la materia correspondiente.
+
+![Interfaz de organización inteligente](docs/screenshots/file-organization.png)
+
+**Ejemplo de archivos utilizados durante las pruebas:**
+
+![Archivos académicos de ejemplo](result-files.png)
+
+> **Nota:** La clasificación utiliza técnicas de procesamiento de texto y similitud mediante TF-IDF. Los resultados dependen del contenido disponible y del modelo entrenado. Esta versión es un prototipo académico y no garantiza una clasificación perfecta.
+
+
 ## Tecnologías
 
 | Tecnología | Uso |
