@@ -77,7 +77,7 @@ El usuario selecciona una carpeta de origen y una carpeta de destino. ClassifyED
 
 **Ejemplo de archivos utilizados durante las pruebas:**
 
-![Archivos académicos de ejemplo](result-files.png)
+![Archivos académicos de ejemplo](docs/screenshots/result-files.png)
 
 > **Nota:** La clasificación utiliza técnicas de procesamiento de texto y similitud mediante TF-IDF. Los resultados dependen del contenido disponible y del modelo entrenado. Esta versión es un prototipo académico y no garantiza una clasificación perfecta.
 
